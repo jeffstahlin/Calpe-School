@@ -1,0 +1,25 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+		<li><%= link_to "New", new_admin_gallery_path %></li>
+	</ul>
+<% end %>
+
+<div id="content">
+	<h1>Galleries List</h1>
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<tr>
+				<th>Title</th>
+				<th></th>
+				<th>Date Created</th>
+				<th></th>
+				<th>Options </th>
+
+			</tr>			
+			<%= render :partial => "gallery", :collection => @galleries %>
+		</table>
+	</div>
+</div>
+

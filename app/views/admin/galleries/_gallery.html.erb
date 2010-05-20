@@ -1,0 +1,19 @@
+<tr>
+	<td class="title">
+	<%= gallery.title %>
+	</td>
+	<td style="width:25px"></td>
+	<td >
+	<%= gallery.created_at.strftime("%a %d %B %Y") %>
+	</td>
+	<td style="width:25px"></td>
+	<td>
+		<table class="nolines">
+			<tr>
+				<td><%= link_to image_tag ('system/admin/buttons/search.jpg', :height => "15px", :title => "show"), admin_gallery_path(gallery) %></td><td>&nbsp;|&nbsp;</td>
+				<td><%= link_to image_tag ('system/admin/buttons/edit.jpg', :height => "15px", :title => "edit"), edit_admin_gallery_path(gallery) %></td><td>&nbsp;|&nbsp;</td>
+				<td><%= link_to image_tag ('system/admin/buttons/delete.jpg', :height => "15px", :title => "delete"),  admin_gallery_path(gallery), :confirm => 'Are you sure?', :method => :delete %></td>
+			</tr>
+		</table>	
+	</td>
+</tr>

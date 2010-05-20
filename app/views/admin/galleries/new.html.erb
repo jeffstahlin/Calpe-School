@@ -1,0 +1,28 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", admin_galleries_path(@event) %></li>
+	</ul>
+<% end %>
+
+
+<div id="content">
+	<h1>New Event Gallery</h1>
+
+	<div id="tabs" class="ui-tabs">
+
+		<% form_for :gallery,@gallery,:url=>{:controller=>"admin/galleries", :action=>"create"},:html=>{:multipart =>true}  do |f| %>	
+	  <%= render :partial => "form", :locals => {:f =>f}%>
+	  <p>
+	    <%= f.submit 'Create' %>
+	  </p>
+		<hr />
+
+		<% end %>
+	
+	</div>
+</div>
+
+<% content_for(:script) do %>
+
+<%= render :partial => "shared/tinymce" %>
+<% end %>

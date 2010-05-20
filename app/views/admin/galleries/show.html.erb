@@ -1,0 +1,33 @@
+<% content_for(:sub_menu) do %>
+	<ul>
+		<li><%= link_to "Back", :back %></li>
+		<li><%= link_to "New", new_admin_gallery_path %></li>
+	</ul>
+<% end %>
+
+<div id="content">
+	<h1>Galleries List</h1>
+
+	<div id="itsthetable">	
+		<table class="page_list">
+			<tr>
+				<th>Thumb</th>
+				<th></th>
+				<th>Title</th>
+				<th></th>
+				<th>Options </th>
+			</tr>			
+			<%= render :partial => "upload_list", :collection => @uploads %>
+		</table>
+	</div>
+	<hr/>
+		<% form_for :upload,@upload,:url=>{:controller=>"admin/uploads", :action=>"create", :gallery_id=>@gallery.id},:html=>{:multipart =>true}  do |f| %>	
+	  <%= render :partial => "upload", :locals => {:f =>f}%>
+	  <p>
+	    <%= f.submit 'Create' %>
+	  </p>
+		<hr />
+ 
+		<% end %>
+</div>
+

@@ -1,0 +1,17 @@
+<p>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+</p>
+
+<p>
+  <%= f.label :description %><br />
+  <%= f.text_area :description %>
+</p>
+
+<p>
+	<% if controller.action_name == "edit" %>
+		<%= image_tag upload.photo.url(:thumb) if upload.photo != " " %>
+	<% end %>
+  <%= f.label :photo %><br />
+  <%= f.file_field :photo %>
+</p>

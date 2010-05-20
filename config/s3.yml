@@ -1,0 +1,14 @@
+development:
+  bucket: calpe-development
+  access_key_id: AKIAI7DG2I3UGHEC6FKA
+  secret_access_key: 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
+
+test:
+  bucket: calpe-development
+  access_key_id: AKIAI7DG2I3UGHEC6FKA
+  secret_access_key: 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
+
+production:
+  bucket: calpe-development
+  access_key_id: AKIAI7DG2I3UGHEC6FKA
+  secret_access_key: 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

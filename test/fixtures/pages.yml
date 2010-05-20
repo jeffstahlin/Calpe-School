@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  name: MyString
+  navlabel: MyString
+  body: MyText
+  position: 1
+  parent_id: 1
+
+two:
+  title: MyString
+  name: MyString
+  navlabel: MyString
+  body: MyText
+  position: 1
+  parent_id: 1

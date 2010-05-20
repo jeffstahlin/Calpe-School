@@ -1,0 +1,10 @@
+--- 
+javascripts: 
+- base: 
+  - application
+stylesheets: 
+- base: 
+  - print
+  - screen
+  - application
+  - admin

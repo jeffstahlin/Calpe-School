@@ -1,0 +1,49 @@
+= ActsAsList
+
+This acts_as extension provides the capabilities for sorting and reordering a
+number of objects in a list. The class that has this specified needs to have
+a +position+ column defined as an integer on the mapped database table.
+
+This plugin derived from David Heinemeier Hansson acts_as_list but has been
+refactored to make it less obtrusive and more "Ruby on Rails 2.1+"-y.
+
+
+== Example
+
+  class TodoList < ActiveRecord::Base
+    has_many :todo_items, :order => "position"
+  end
+
+  class TodoItem < ActiveRecord::Base
+    belongs_to :todo_list
+    acts_as_list :scope => :todo_list
+  end
+
+  class TodoItem < ActiveRecord::Base
+    belongs_to :todo_list
+    acts_as_list :scope => 'todo_list_id = #{todo_list_id}' # note single quotes
+  end
+
+  class TodoItem < ActiveRecord::Base
+    belongs_to :todo_list
+    acts_as_list :scope => proc{ ['todo_list_id = ?', todo_list_id] } # evaluated in context of record
+  end
+
+  todo_list.first.move_to_bottom
+  todo_list.last.move_higher
+
+  TodoList.order_by_ids([1, 3, 2, 5, 4])
+  TodoList.order_by_ids(%w(1 3 2 4 5))
+
+  # if you need single table inheritance models to have independent scope - write type in scopen explicitly
+  class Widget < ActiveRecord::Base
+    acts_as_list :scope => proc{ {:type => type} }
+  end
+  class WidgetA < Widget
+  end
+  class WidgetB < Widget
+  end
+
+
+
+Copyright (c) 2007 Florian Aßmann, released under the MIT license

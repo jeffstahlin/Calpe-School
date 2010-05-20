@@ -1,0 +1,8 @@
+Autotest.add_hook :reset do |at|
+  # map any .rb file to test/list_test.rb
+  # I don't rename list_test.rb to allow easier pulling of changes
+  at.clear_mappings
+  at.add_mapping(/^.*\.rb$/) do |filename, _|
+    'test/list_test.rb'
+  end
+end
