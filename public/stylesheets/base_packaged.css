@@ -121,4 +121,5 @@ body #wrapper #right-column #double_advertisement {width: 291px; float: left; he
 body #wrapper #right-column #magazine {width: 291px; float: left; height: 295px; background-image: url(../images/system/bg/versionSprites.png); background-position: 0px -6660px}
 body #wrapper.whatson {height: 1892px}
 body #footer {width: 100%; float: left; height: 225px; background-repeat: repeat-x; margin-top: 14px}
-#content {float: left}
+body #wrapper #header {height: 200px}
+body #wrapper #content {float: left; width: 100%; background: red}
