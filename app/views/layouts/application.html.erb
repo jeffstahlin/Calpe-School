@@ -46,7 +46,9 @@
         </div> 
        
 				<div id="navbar">
+					<% unless controller.controller_name == "home" %>
 					<%= render :partial => "shared/menu/back"	%>
+					<% end %>
         </div>               
 				<div id="sub_navbar">
 							<%= yield :sub_menu %>

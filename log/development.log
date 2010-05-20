@@ -3262,3 +3262,31 @@ Rendering admin/galleries/index
 Rendered admin/galleries/_gallery (7.8ms)
 Rendered shared/menu/_back (0.1ms)
 Completed in 24ms (View: 10, DB: 3) | 200 OK [http://localhost/admin/galleries]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-20 23:36:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `logged_in?' for #<ActionView::Base:0x105272468>) on line #1 of app/views/shared/menu/_back.html.erb:
+1: <% if logged_in? %>
+2: <ul class="backend">
+3: 	<li><a href="/admin"> Overview</a></li>
+4: 	<li><a href="/admin/pages">PAGES</a></li>
+
+    app/views/shared/menu/_back.html.erb:1
+    app/views/layouts/application.html.erb:49
+
+Rendered rescues/_trace (114.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-05-20 23:38:00) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
