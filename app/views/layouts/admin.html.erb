@@ -43,10 +43,19 @@
       <div id="header">
         <div id="logo">
          
-        </div>  
-			</div>  
+        </div> 
+       
+				<div id="navbar">
+					<% unless controller.controller_name == "home" %>
+					<%= render :partial => "shared/menu/back"	%>
+					<% end %>
+        </div>               
+				<div id="sub_navbar">
+							<%= yield :sub_menu %>
+				</div>
+      </div>  
 		
-			<%= yield %>
+		<%= yield %>
 
     </div>
      <div id="footer">

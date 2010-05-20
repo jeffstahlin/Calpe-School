@@ -4,7 +4,7 @@ class Upload < ActiveRecord::Base
 
 	has_attached_file :photo,
 		                :styles => {
-		                  :pagesize => ["621x374#", :jpg],          :thumb => ["120x74#", :jpg],
+		                  :pagesize => ["600x400#", :jpg],          :thumb => ["125x100#", :jpg],
 		                },:processors => [:cropper],:convert_options => {  
 		                    :thumb => "-resize 120x74 -gravity center"
 		              	},
