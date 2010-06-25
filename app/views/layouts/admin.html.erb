@@ -11,7 +11,7 @@
 	 		google.load("jquery", "1.3.2");
 			google.load("jqueryui", "1.7.2");
 		</script>
-		<%= stylesheet_link_merged :base %>
+		<%= stylesheet_link_tag "adminstyles" %>
 		<!--[if IE]>
 		    <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<![endif]-->
@@ -39,25 +39,33 @@
 	
   </head>
   <body>
-   <div id="wrapper">
-      <div id="header">
-        <div id="logo">
-         
-        </div> 
-       
-				<div id="navbar">
-					<% unless controller.controller_name == "home" %>
-					<%= render :partial => "shared/menu/back"	%>
-					<% end %>
-        </div>               
-				<div id="sub_navbar">
-							<%= yield :sub_menu %>
-				</div>
-      </div>  
-		
-		<%= yield %>
-
+   <div id="wrap">
+   	<div class="headercontainer">
+   	 <div class="header">
+			<div class="emblem">
+      	<?php include 'includes/logo.php'; ?>
+    	</div>
+    	<div class="logo">
+    		<h1>CALPE SCHOOL</h1>
+      	<h2>SAN PEDRO - MARBELLA - SPAIN</h2>
+     </div>
+		</div>
+  </div>
+  <div id="container">  
+  	<div class="content">
+			<p><%= yield %></p>
+    </div>    
+		<div id="navbar">
+			<% unless controller.controller_name == "home" %>
+				<%= render :partial => "shared/menu/back"	%>
+			<% end %>
     </div>
+    <hr class="adminhr" />               
+		<div id="sub_navbar">
+			<%= yield :sub_menu %>
+		</div>
+   </div>  
+		
      <div id="footer">
      </div> 
 		<%= yield :script %>

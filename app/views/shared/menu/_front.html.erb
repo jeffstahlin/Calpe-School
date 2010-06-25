@@ -1,0 +1,25 @@
+<ul id="nav">
+	<% for page in @pages %>
+		<li><%= link_to page.navlabel, view_page_path(page.name) %>
+			<% if page.subpages.empty? %>
+			
+			<% else	%>	 	
+				<ul>
+					<% for subpage in page.subpages %>
+						<li><%= link_to subpage.navlabel, view_page_path(subpage.name) %>
+							<% if subpage.subpages.empty? %>
+							
+							<% else %>
+								<ul>
+									<% for subpage in subpage.subpages %>
+										<li><%= link_to subpage.navlabel, view_page_path(subpage.name) %></li>
+									<% end %>
+								</ul>
+							<% end %>
+						</li>
+					<% end %>
+				</ul>
+			<% end %>
+		</li>	
+	<% end %>
+</ul> 

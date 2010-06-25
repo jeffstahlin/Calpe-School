@@ -74,7 +74,7 @@ class Admin::PagesController < Admin::BaseController
         format.html {
            
              flash[:notice] = 'Category was successfully updated.'
-             redirect_to(admin_page_path(@page))
+             redirect_to(admin_pages_path)
           
           }
         format.xml  { head :ok }
