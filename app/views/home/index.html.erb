@@ -1,1 +1,9 @@
-<%= @page.body %>
+<% unless params[:name] == "Photo-Gallery" %>
+	<%= @page.body %>
+<% else %>	
+	<% @galleries.each do |gallery|%>
+		<ul>
+			<%= render :partial => "shared/front/images", :collection => gallery.uploads %>
+		</ul>
+	<% end %>
+<% end %>

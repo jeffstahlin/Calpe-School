@@ -10,10 +10,9 @@
 	text-decoration:none;
 	display:block;
 	padding:10px 20px;
-	background-color:#fff ;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border:1px solid #F6C739;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	
 }
 #subMenusContainer a{
 	text-decoration:none;
@@ -62,7 +61,7 @@
 
 /* Parent Main Menu Links ---[javascript users only]*/
 .mainMenuParentBtn{	
-	 background: url(../images/system/navigation/arrow_right.gif) right center no-repeat; 
+	 background: url(../images/system/all/sidebar.png) right center no-repeat; 
 }
 
 /* Parent Main Menu Links on hover or focus ---[javascript users only]*/
@@ -90,7 +89,7 @@
 	/*border around submenu goes here*/
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
-	background:#fff;	
+    background:#FFF;
 	border:1px solid #F6C739; 
 	left:0;
 }
@@ -109,6 +108,9 @@
 	display:block;
 	list-style:none;
 	position:relative;
+	background:url(../images/system/all/sidebar.png);
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
 }
 
 #subMenusContainer li{
@@ -121,10 +123,10 @@
 	display:block;
 	position: absolute;
 	list-style:none;
-	margin:0 0 0 -245px;
+	margin:0 0 0 -155px;
 	width:245px;
 	z-index:5;
-	top:190px;
+	top:175px;
 	left:29%;
 	text-align: right;
 	display:block;

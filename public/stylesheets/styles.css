@@ -35,7 +35,7 @@ body {
 	color:#333;
 	width:100%;
 	margin:0 auto ;
-	background:#FFF url(/images/system/all/bgfix.jpg) center repeat-y;
+	background:#FFF;
 	font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -51,11 +51,11 @@ body > #wrap {height: auto; min-height:100%;}
 /* Header */
 
 .headercontainer {
-	background-image:url(/images/system/all/header.jpg);
+	background-image:url(/images/system/all/header.png);
 }
 
 .header {
-	color:#044f92;
+	color:#FFF;
 	height:173px;
 	width:960px;
 	margin:0 auto;
@@ -66,7 +66,7 @@ body > #wrap {height: auto; min-height:100%;}
 	font-size:66px;
 	padding:0;
 	margin:0;
-	border-bottom:1px solid #044f92;
+	border-bottom:1px solid #FFF;
 }
 
 .header h2{
@@ -78,10 +78,11 @@ body > #wrap {height: auto; min-height:100%;}
 }
 
 .emblem {
-	margin:20px 45px 20px 60px;
+	margin:19px 45px 20px 60px;
 	width:122px;
-	height:116px;
+	height:134px;
 	float:left;
+	background:url(/images/system/all/logo.png);
 }
 
 .logo {
@@ -105,21 +106,27 @@ body > #wrap {height: auto; min-height:100%;}
 	float:right;
 }
 
-.ukflag {
-	margin-bottom:5px;
-	margin-left:10px;
-	color:#FFF;
-	text-decoration:none;
+.changelanguage {
+	clear:both;
+	margin-left:22px;
+	padding:0 40px;
+	width:111px;
+	height:100px;
+	text-align:center;
+	border:2px solid #F6C739;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	background:url(/images/system/all/changelang.png);
+	font-size:15px;
 }
 
-.ukflag:hover {
-	color:#FF0;
+.changelanguage table{
+	margin-top:12px;
+	margin-left:3px;	
 }
 
-.esflag {
-	margin-bottom:5px;
-	margin-left:10px;
-	color:#FFF;
+.changelanguage .changelang {
+	color:#044F92;
 	text-decoration:none;
 }
 
@@ -140,6 +147,14 @@ body > #wrap {height: auto; min-height:100%;}
 	line-height: 15px;
 }
 
+.sidebar a {
+	color:#FFF;
+}
+
+.sidebar a:hover {
+	color:#333;
+}
+
 .spacer {
 	background-image:url(/images/system/all/sidebar.jpg);
 	width:230px;
@@ -150,11 +165,24 @@ body > #wrap {height: auto; min-height:100%;}
 
 /* Content */
 
+#loginbox {
+	margin-top:20px;
+	padding:20px;
+	width:310px;
+	height:260px;
+	background:url(/images/system/all/loginbox.png) no-repeat;
+	color:#FFF;
+}
+
+#loginbox h1 {
+	padding-bottom:20px;
+	border-bottom:1px solid #FFF;
+}
+
 #container {
 	min-height:100%;
 	width:960px;
 	margin:0 auto;
-	background-image:url(/images/system/all/containerbg.jpg);
 	padding-bottom:30px;
 	overflow:hidden;
 }
@@ -167,8 +195,6 @@ body > #wrap {height: auto; min-height:100%;}
 	min-height:100%;
 	font-size:14px;
 	color:#044f92;
-	border-right:1px solid #CCC;
-	border-left:230px solid #EAEAEA;
 	margin-left:-230px;
 	line-height:18px;
 }
@@ -347,7 +373,7 @@ body > #wrap {height: auto; min-height:100%;}
 
 .footer {
 	width:100%;
-	background-color:#044F92;
+	background:url(/images/system/all/footer.png);
 	clear:both;
 	padding:7px 0;
 	position:relative;

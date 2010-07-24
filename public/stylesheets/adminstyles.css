@@ -35,13 +35,14 @@ body {
 	color:#333;
 	width:100%;
 	margin:0 auto ;
-	background:#FFF url(/images/system/all/bgfix.jpg) center repeat-y;
+	background:#FFF;
 	font-family:Arial, Helvetica, sans-serif;
 }
 
 #navbar ul li {
 	font-size:18px;
 	list-style:none;
+	line-height:40px;
 }
 
 .adminhr {height:5px; border:1px solid #044f92; margin:10px 0;}
@@ -51,11 +52,11 @@ body > #wrap {height: auto; min-height:100%;}
 /* Header */
 
 .headercontainer {
-	background-image:url(/images/system/all/header.jpg);
+	background-image:url(/images/system/all/header.png);
 }
 
 .header {
-	color:#044f92;
+	color:#FFF;
 	height:173px;
 	width:960px;
 	margin:0 auto;
@@ -66,7 +67,7 @@ body > #wrap {height: auto; min-height:100%;}
 	font-size:66px;
 	padding:0;
 	margin:0;
-	border-bottom:1px solid #044f92;
+	border-bottom:1px solid #FFF;
 }
 
 .header h2{
@@ -78,10 +79,11 @@ body > #wrap {height: auto; min-height:100%;}
 }
 
 .emblem {
-	margin:20px 45px 20px 60px;
+	margin:19px 45px 20px 60px;
 	width:122px;
-	height:116px;
+	height:134px;
 	float:left;
+	background:url(/images/system/all/logo.png);
 }
 
 .logo {
@@ -146,6 +148,14 @@ body > #wrap {height: auto; min-height:100%;}
 	min-height:100%;
 }
 
+.backend {
+	width:250px;
+	background:url(/images/system/all/backendmenu.png) no-repeat;
+	margin-top:10px;
+	height:150px;
+	padding-top:10px;
+}
+
 /* End Sidebar */
 
 /* Content */
@@ -154,7 +164,6 @@ body > #wrap {height: auto; min-height:100%;}
 	min-height:100%;
 	width:960px;
 	margin:0 auto;
-	background-image:url(/images/system/all/containerbg.jpg);
 	padding-bottom:30px;
 	overflow:hidden;
 }
@@ -162,13 +171,11 @@ body > #wrap {height: auto; min-height:100%;}
 .content {
 	float:right;
 	background-color:#FFF;
-	padding:0 20px;
+	padding:20px;
 	width:689px;
 	min-height:100%;
 	font-size:14px;
 	color:#044f92;
-	border-right:1px solid #CCC;
-	border-left:230px solid #EAEAEA;
 	margin-left:-230px;
 	line-height:18px;
 }
@@ -399,162 +406,6 @@ body > #wrap {height: auto; min-height:100%;}
 
 /* End Footer */
 
-/* Accordion Menu */
-
-dl.accordion
-{
-	width: 216px;
-	margin:0 6px;
-	border-left: 1px solid #e6e2af;
-	border-right: 1px solid #e6e2af;
-	border-bottom: 1px solid #e6e2af;
-}
-
-dl.accordion a {
-	text-decoration:none;
-}
-
-/* @group Level 1 */
-
-dl.accordion dt
-{
-	position: relative;
-	height: 27px;
-	padding: 10px 0 0 25px;	
-	
-	color: white;
-	background: #044F92 url(/images/system/all/button.png) no-repeat;
-	
-	cursor: pointer;
-	border-top: 1px solid #e6e2af;
-}
-
-* html dl.accordion dt
-{
-	cursor: hand;
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/system/all/button.png', sizingMethod='crop');
-	background-image: none;
-}
-
-dl.accordion dt.open
-{
-	background-image: url(/images/system/all/buttonactive.png);
-}
-
-/*
-* html dl.accordion dt.open
-{
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/all/buttonactive.png', sizingMethod='crop');
-	background-image: none;
-}
-*/
-
-dl.accordion dd
-{
-	position: relative;
-	overflow: hidden;
-	background: #efecca;
-}
-
-/* @group Content */
-
-dl.accordion dd.sub_accordion
-{
-	
-}
-
-dl.accordion dd.accordion_content
-{
-	padding: 0 10px 0 25px;
-}
-
-dl.accordion dd.accordion_content p
-{
-	padding: 5px 0 7px 0;
-}
-
-/* @end */
-
-/* @end */
-
-/* @group Level 2 */
-
-dl.accordion dd dl dt
-{
-	padding-left: 15px;
-	background-color: #FFF;
-	background-position: 20px 0;
-	background-image:none;
-	color:#044F92;
-	height:20px;
-}
-
-dl.accordion dd dl dt:hover
-{
-	padding-left: 25px;
-	background-color: #eef6fe;
-
-}
-
-dl.accordion dd dl dt img {
-	margin:-8px 10px 0 0;
-}
-
-dl.accordion dd dl dt.open {
-	background-image: none;
-}
-
-
-dl.accordion dd dl dt a:hover {
-	color:#F00;
-}
-
-dl.accordion dd dl dd.accordion_content
-{
-	padding-left: 45px;
-}
-
-/* @end */
-
-/* @group Level 3 */
-
-dl.accordion dd dl dd dl dt
-{
-	padding-left: 30px;
-	background-color: #F4F4F4;
-	background-position: 40px 0;
-	background-image:none;
-}
-
-dl.accordion dd dl dd dl dt:hover{
-	padding-left: 40px;
-	background-color:EAEAEA;
-}
-
-dl.accordion dd dl dd dl dd.accordion_content
-{
-	padding-left: 65px;
-}
-
-/* @end */
-
-/* @group Level 4 */
-
-dl.accordion dd dl dd dl dd dl dt
-{
-	padding-left: 85px;
-	background-color: #7bc3e4;
-	background-position: 60px 0;
-}
-
-dl.accordion dd dl dd dl dd dl dd.accordion_content
-{
-	padding-left: 85px;
-}
-
-/* @end */
-	
-/* END Accordion Menu */
 
 /* Image Gallery */
 

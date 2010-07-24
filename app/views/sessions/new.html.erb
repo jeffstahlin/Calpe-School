@@ -1,16 +1,20 @@
-<h1>Log In</h1>
-
-<% form_tag session_path do -%>
-<p><%= label_tag 'login' %><br />
-<%= text_field_tag 'login', @login %></p>
-
-<p><%= label_tag 'password' %><br/>
-<%= password_field_tag 'password', nil %></p>
-
-<!-- Uncomment this if you want this functionality
-<p><%= label_tag 'remember_me', 'Remember me' %>
-<%= check_box_tag 'remember_me', '1', @remember_me %></p>
--->
-
-<p><%= submit_tag 'Log in' %></p>
-<% end -%>
+<div id="loginbox">
+	<h1>Log in to your account</h1>
+	
+	<% form_tag session_path do -%>
+	<p><%= label_tag 'login' %></p>
+	<p><%= text_field_tag 'login', @login %></p>
+	
+	<p><%= label_tag 'password' %></p>
+	<p><%= password_field_tag 'password', nil %></p>
+	
+	<!-- Uncomment this if you want this functionality
+	<p><%= label_tag 'remember_me', 'Remember me' %>
+	<%= check_box_tag 'remember_me', '1', @remember_me %></p>
+	-->
+	
+	<p><%= submit_tag 'Log in' %></p>
+	<% end -%>
+	
+	<p>Please enter you username and password in order to acces your admin account. Here you will be able to add/edit pages and photo galleries.</p>
+</div>

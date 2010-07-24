@@ -36,9 +36,29 @@ class Admin::GalleriesController < Admin::BaseController
 	end
 
   def edit
-		@event = Page.find_by_id(params[:page_id])
+		@page = Page.find_by_id(params[:page_id])
 		@gallery = Gallery.find_by_id(params[:id])
   end
+  
+	def update
+	@gallery = Gallery.find_by_id(params[:id])
+		respond_to do |format|
+		 if @gallery.update_attributes(params[:gallery])
+			flash[:notice] = 'gallery was successfully UPDATED.'
+			format.html {
+				 
+				   flash[:notice] = 'gallery was successfully updated.'
+				   redirect_to(admin_galleries_path)
+				
+				}
+			format.xml  { head :ok }
+		 else
+			 format.html { render :action => "edit" }
+			 format.xml  { render :xml => @gallery.errors, :status => :unprocessable_entity }
+		 end
+		end
+	end
+
 
 	 def destroy
      @gallery = Gallery.find(params[:id])
