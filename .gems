@@ -1,0 +1,13 @@
+rails --version '= 2.3.5'
+aws-s3 --version '>= 0.6.2' --source http://gemcutter.org
+builder --version '>= 2.1.2'
+sitemap_generator --version '>=0.3.3'
+geokit --version '>=1.5.0'
+will_paginate --version '>=2.3.11'
+xml-object --version '>=0.9.92' --source http://gemcutter.org
+haml --version '>=2.2.15'
+ym4r --version '>=0.6.1'
+rubyist-aasm --version '>=2.1.1' --source http://gems.github.com
+icalendar --version '>=1.1.5'
+auto_html --version '>=1.2.1'
+
